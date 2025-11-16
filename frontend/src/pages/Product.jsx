@@ -6,11 +6,14 @@ import RelatedProducts from '../components/RelatedProducts';
 
 const Product = () => {
   const {productId} = useParams();
-  const {products, currency,addToCart } = useContext(ShopContext);
+  const {products, currency,addToCart, navigate } = useContext(ShopContext);
 
   const [productData,setProductData] = useState(false);
   const [image,setImage] =  useState('');
   const [size,setSize]=useState('');
+
+  // ⭐ NEW: Added state
+  const [added, setAdded] = useState(false);
 
   // ⭐ Seeded random so ratings stay SAME every refresh
   function seededRandom(seed) {
@@ -43,8 +46,8 @@ const Product = () => {
   }
 
   useEffect(() => {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-}, [productId]);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, [productId]);
 
   useEffect(()=>{
     fetchProductData();
@@ -121,11 +124,19 @@ const Product = () => {
           </div>
         </div>
 
+        {/* ⭐ UPDATED BUTTON */}
         <button 
-          onClick={()=>addToCart(productData._id,size)} 
+          onClick={()=>{
+            if (!added) {
+              addToCart(productData._id,size);
+              setAdded(true);
+            } else {
+              navigate('/cart');
+            }
+          }} 
           className='bg-black text-white px-8 py-3 text-sm active:bg-gray-700'
         >
-          ADD TO CART
+          {added ? "GO TO CART" : "ADD TO CART"}
         </button>
 
         <hr className='mt-8 sm:w-4/5' />
