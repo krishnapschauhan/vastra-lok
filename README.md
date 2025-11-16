@@ -23,7 +23,7 @@ A fully responsive, fast and modern clothing e-commerce application built using 
 
 ## 🚀 Live Demo
 
-👉 **Frontend:** https://vastra-lok-frontend.vercel.app/
+👉 **Frontend:** https://vastralok.vercel.app/
 
 ---
 
