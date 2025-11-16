@@ -18,6 +18,19 @@ const ShopContextProvider = (props) => {
     const [token,setToken] = useState('')
     const navigate=useNavigate()
 
+    // ⭐ Load cart from localStorage
+    useEffect(() => {
+      const savedCart = localStorage.getItem("cartItems");
+      if (savedCart) {
+        setCartItems(JSON.parse(savedCart));
+      }
+    }, []);
+
+    // ⭐ Save cart to localStorage
+    useEffect(() => {
+      localStorage.setItem("cartItems", JSON.stringify(cartItems));
+    }, [cartItems]);
+
     const addToCart = async (itemId,size) =>{
         if(!size){
             toast.error('Select Product Size');
