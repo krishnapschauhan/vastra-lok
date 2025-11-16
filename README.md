@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://res.cloudinary.com/dqumagamd/image/upload/v1763281060/logo_p0gflp.png" alt="Vastra Lok Logo" width="140" style="background:white; padding:10px; border-radius:10px;" />
+  <img src="https://res.cloudinary.com/dqumagamd/image/upload/v1763282199/VastraLok_logo_1_nmqwym.png" alt="Vastra Lok Logo" width="140" style="background:white; padding:10px; border-radius:10px;" />
 </p>
 
 <h1 align="center">🛍️ VASTRA LOK — Modern Clothing E-Commerce Web App</h1>
@@ -89,7 +89,7 @@ cd frontend
 npm install
 
 cd ../backend
-npm install
+node server.js
 ```
 
 ### **3️⃣ Setup environment variables**
