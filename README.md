@@ -1,6 +1,17 @@
 <p align="center">
-  <img src="https://res.cloudinary.com/dqumagamd/image/upload/v1763282199/VastraLok_logo_1_nmqwym.png" alt="Vastra Lok Logo" width="140" style="background:white; padding:10px; border-radius:10px;" />
+  <img 
+    src="https://res.cloudinary.com/dqumagamd/image/upload/v1763281060/logo_p0gflp.png" 
+    alt="Vastra Lok Logo" 
+    width="160"
+    style="
+      background:#ffffff; 
+      padding:15px; 
+      border-radius:12px; 
+      box-shadow:0 0 10px rgba(0,0,0,0.15);
+    "
+  />
 </p>
+
 
 <h1 align="center">🛍️ VASTRA LOK — Modern Clothing E-Commerce Web App</h1>
 
@@ -29,30 +40,38 @@ A fully responsive, fast and modern clothing e-commerce application built using 
 - 🛠️ Admin dashboard (add/edit products & orders)
 
 ---
-
 ## 🛠️ Tech Stack
 
 ### **Frontend**
-<img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB">  
-<img src="https://img.shields.io/badge/Vite-B73BFE?style=for-the-badge&logo=vite&logoColor=FFD62E">  
-<img src="https://img.shields.io/badge/TailwindCSS-0F172A?style=for-the-badge&logo=tailwind-css&logoColor=38BDF8">  
-<img src="https://img.shields.io/badge/React_Router-DD0031?style=for-the-badge&logo=react-router&logoColor=white">  
+<p align="center">
+  <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" />
+  <img src="https://img.shields.io/badge/Vite-B73BFE?style=for-the-badge&logo=vite&logoColor=FFD62E" />
+  <img src="https://img.shields.io/badge/TailwindCSS-0F172A?style=for-the-badge&logo=tailwind-css&logoColor=38BDF8" />
+  <img src="https://img.shields.io/badge/React_Router-DD0031?style=for-the-badge&logo=react-router&logoColor=white" />
+</p>
 
 ### **Backend**
-<img src="https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white">  
-<img src="https://img.shields.io/badge/Express.js-404D59?style=for-the-badge">  
+<p align="center">
+  <img src="https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white" />
+  <img src="https://img.shields.io/badge/Express.js-404D59?style=for-the-badge" />
+</p>
 
 ### **Database**
-<img src="https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white">  
+<p align="center">
+  <img src="https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white" />
+</p>
 
 ### **Cloud Services**
-<img src="https://img.shields.io/badge/Cloudinary-3448C5?style=for-the-badge&logo=cloudinary&logoColor=white">  
-<img src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white">  
+<p align="center">
+  <img src="https://img.shields.io/badge/Cloudinary-3448C5?style=for-the-badge&logo=cloudinary&logoColor=white" />
+  <img src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white" />
+</p>
 
 ### **Payments**
-<img src="https://img.shields.io/badge/Stripe-626CD9?style=for-the-badge&logo=stripe&logoColor=white">  
-<img src="https://img.shields.io/badge/Razorpay-02042B?style=for-the-badge&logo=razorpay&logoColor=0A99FF">
-
+<p align="center">
+  <img src="https://img.shields.io/badge/Stripe-626CD9?style=for-the-badge&logo=stripe&logoColor=white" />
+  <img src="https://img.shields.io/badge/Razorpay-02042B?style=for-the-badge&logo=razorpay&logoColor=0A99FF" />
+</p>
 ---
 
 ## 📸 Screenshots
