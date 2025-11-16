@@ -1,6 +1,6 @@
 <p align="center">
   <img 
-    src="https://res.cloudinary.com/dqumagamd/image/upload/v1763281060/logo_p0gflp.png" 
+    src="https://res.cloudinary.com/dqumagamd/image/upload/v1763282199/VastraLok_logo_1_nmqwym.png" 
     alt="Vastra Lok Logo" 
     width="160"
     style="
