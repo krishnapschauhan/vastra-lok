@@ -7,14 +7,14 @@ import { toast } from 'react-toastify';
 
 const Product = () => {
   const {productId} = useParams();
-  const {products, currency,addToCart, navigate } = useContext(ShopContext);
+  const {products, currency,addToCart, navigate, cartItems } = useContext(ShopContext);
 
   const [productData,setProductData] = useState(false);
   const [image,setImage] =  useState('');
   const [size,setSize]=useState('');
 
-  // ⭐ NEW: Added state
-  const [added, setAdded] = useState(false);
+  // ⭐ Detect if the item (with selected size) is ALREADY in cart
+  const added = size && cartItems?.[productId]?.[size] > 0;
 
   // ⭐ Seeded random so ratings stay SAME every refresh
   function seededRandom(seed) {
@@ -22,12 +22,9 @@ const Product = () => {
     return x - Math.floor(x);
   }
 
-  // Create a seed number from productId (last 3 hex digits)
   const seed = parseInt(productId.slice(-3), 16);
-
   const randomRating = Math.floor(seededRandom(seed) * 3) + 3;
   const randomReviews = Math.floor(seededRandom(seed + 1) * 380) + 20;
-
   const stars = Array.from({ length: 5 }, (_, i) => i < randomRating);
 
   const oldPrice = Math.round((productData?.price || 0) * 1.3);  
@@ -54,10 +51,8 @@ const Product = () => {
   return productData ? (
     <div className='border-t-2 pt-10 transition-opacity ease-in duration-500 opacity-100'>
 
-     {/* -----------product data-------------*/}
      <div className='flex gap-12 sm:gap-12 flex-col sm:flex-row'>
 
-      {/*-------- product images ----------*/}
       <div className='flex-1 flex flex-col-reverse gap-3 sm:flex-row'>
         <div className='flex sm:flex-col overflow-x-auto sm:overflow-y-scroll justify-between sm:justify-normal sm:w-[18.7%] w-full'>
           {productData.image.map((item,index)=>(
@@ -75,7 +70,6 @@ const Product = () => {
         </div>
       </div>
 
-      {/* ------------Product Info--------*/}
       <div className='flex-1'>
         <h1 className='font-medium text-2xl mt-2'>{productData.name}</h1>
 
@@ -120,16 +114,16 @@ const Product = () => {
           </div>
         </div>
 
-        {/* ⭐ UPDATED BUTTON WITH SIZE CHECK */}
+        {/* ⭐ AUTO-DETECT BUTTON */}
         <button 
           onClick={()=>{
+            if (!size) {
+              toast.error("Please select a size");
+              return;
+            }
+
             if (!added) {
-              if (!size) {
-                toast.error("Please select a size");
-                return;
-              }
               addToCart(productData._id,size);
-              setAdded(true);
             } else {
               navigate('/cart');
             }
@@ -150,7 +144,6 @@ const Product = () => {
       </div>
     </div>
 
-    {/*--------------Description and review section---------------*/}
     <div className='mt-20'>
       <div className='flex'>
         <b className='border px-5 py-3 text-sm'>Description</b>
